@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Temperature Converter</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #777;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: #4CAF50;
+            color: #fff;
+            font-size: 16px;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+        .result {
+            text-align: center;
+            font-size: 24px;
+            margin-top: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Temperature Converter</h1>
+        <div class="input-group">
+            <label>Temperature (Celsius)</label>
+            <input type="number" id="celsius-input" placeholder="Enter temperature in Celsius">
+        </div>
+        <div class="input-group">
+            <label>Temperature (Fahrenheit)</label>
+            <input type="number" id="fahrenheit-input" placeholder="Enter temperature in Fahrenheit">
+        </div>
+        <button class="btn" onclick="convertToFahrenheit()">Convert to Fahrenheit</button>
+        <button class="btn" onclick="convertToCelsius()">Convert to Celsius</button>
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        function convertToFahrenheit() {
+            var celsiusInput = document.getElementById('celsius-input').value;
+            var fahrenheit = (celsiusInput * 9 / 5) + 32;
+            document.getElementById('fahrenheit-input').value = fahrenheit.toFixed(2);
+            document.getElementById('result').innerHTML = '';
+        }
+
+        function convertToCelsius() {
+            var fahrenheitInput = document.getElementById('fahrenheit-input').value;
+            var celsius = (fahrenheitInput - 32) * 5 / 9;
+            document.getElementById('celsius-input').value = celsius.toFixed(2);
+            document.getElementById('result').innerHTML = '';
+        }
+    </script>
+</body>
+</html>

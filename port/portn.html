@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Portfolio</title>
+  
+</head>
+<body>
+  <header>
+    <h1>paari Portfolio</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h2>Welcome to paari portfolio!</h2>
+      <p style="color: aliceblue;">Check out my projects and get in touch.</p>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <div class="profile-img">
+        <img src="profile.png" alt="Profile Image">
+      </div>
+      <div class="profile-text">
+        <h3>Hi, I'm paari</h3>
+        <p style="color: aliceblue;">I'm a web developer passionate about creating interactive and engaging websites.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2>My Projects</h2>
+    <div class="project-card" onclick="openProject('project1')">
+      <img src="project1.jpg" alt="Project 1">
+      <div class="project-overlay">
+        <h3>Project 1</h3>
+      </div>
+    </div>
+    <div class="project-card" onclick="openProject('project2')">
+      <img src="project2.jpg" alt="Project 2">
+      <div class="project-overlay">
+        <h3>Project 2</h3>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name">
+      <input type="email" placeholder="Your Email">
+      <textarea placeholder="Your Message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 John Doe. All rights reserved.</p>
+  </footer>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+    }
+    
+    header {
+      background-color: #000000;
+      padding: 20px;
+      color: #66fcf1;
+    }
+    
+    header h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+    
+    nav ul {
+      list-style: none;
+    }
+    
+    nav ul li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+    
+    nav ul li a {
+      text-decoration: none;
+      color: #45a29e;
+    }
+    
+    .hero {
+      background-image: url('hero.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #66fcf1;
+      background-color: #1f2833;
+    }
+    
+    .hero-content {
+      text-align: center;
+    }
+    
+    .about {
+      padding: 50px;
+      color: #66fcf1;
+      background-color: #1f2833;
+    }
+    
+    .about h2 {
+      font-size: 28px;
+      text-align: center;
+      color: #66fcf1;
+      background-color: #1f2833;
+      margin-bottom: 30px;
+    }
+    
+    .about-content {
+      display: flex;
+      align-items: center;
+    }
+    
+    .profile-img {
+      flex: 1;
+      text-align: center;
+    }
+    
+    .profile-img img {
+      width: 200px;
+      border-radius: 50%;
+    }
+    
+    .profile-text {
+      flex: 1;
+      padding-left: 50px;
+    }
+    
+    .projects {
+      padding: 50px;
+      color: #66fcf1;
+      background-color: #1f2833;
+    }
+    
+    .projects h2 {
+      font-size: 28px;
+      text-align: center;
+      color: #66fcf1;
+      margin-bottom: 30px;
+    }
+    
+    .project-card {
+      position: relative;
+      margin-bottom: 30px;
+      cursor: pointer;
+    }
+    
+    .project-card img {
+      width: 100%;
+    }
+    
+    .project-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .project-card:hover .project-overlay {
+      opacity: 1;
+    }
+    
+    .project-overlay h3 {
+      color: #fff;
+      font-size: 24px;
+    }
+    
+    .contact {
+      padding: 50px;
+      background-color: #333;
+      color: #fff;
+    }
+    
+    .contact h2 {
+      font-size: 28px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    
+    .contact input,
+    .contact textarea {
+      margin-bottom: 20px;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+    }
+    
+    .contact button {
+      padding: 10px 20px;
+      background-color: #66fcf1;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    footer {
+      background-color: #1f2833;
+      padding: 20px;
+      text-align: center;
+      color: #00f7ff;
+    }
+  </style>
+</body>
+</html>
